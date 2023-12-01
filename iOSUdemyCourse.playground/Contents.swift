@@ -69,3 +69,53 @@ multipleIntNames[2] = ["do", "two"]
 multipleIntNames[3] = ["teen", "three"]
 print(multipleIntNames)
 print(multipleIntNames[3]?[1] ?? 0)
+
+// Logical conditions
+// if-else and switch
+
+var age: Int = 33
+if (age > 21) {
+    print("adult")
+} else {
+    print("young")
+}
+
+switch age {
+case 21...:
+    print("adult")
+case 0...21:
+    print("young")
+default:
+    print("invalid value")
+}
+
+// Loops:
+// perform same action multiple times
+// For loop:
+// used to perform action on an array of items
+for i in 0...99 {
+    print(i)
+}
+
+var integers: [Int] = [33, 66, 99]
+for i in integers {
+    print(i)
+}
+
+// While loop:
+// as long as the condition is true, set of statements get executed
+var count: Int = 0
+
+while count < 10 {
+    print(count)
+    count += 1 //without this statement the while loop will go into an infinite loop
+}
+
+// repeat while loop:
+// same as do while
+var i: Int = 0
+repeat {
+    print(i)
+    i += 1
+}
+while i < 10
