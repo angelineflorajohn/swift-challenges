@@ -119,3 +119,37 @@ repeat {
     i += 1
 }
 while i < 10
+
+// Functions:
+// lets you write the code once and be executed any number of times
+// prefixed by the word func
+// organize code and prevent code repetition
+func printIntegers() {
+    for i in 0...100 {
+        print(i)
+    }
+}
+printIntegers()
+// functions can take parameters and return values as well
+func printMessage(message: String, printNumber: Int) -> String {
+    for _ in 0...printNumber {
+        print(message)
+    }
+    return "Completed!"
+}
+printMessage(message: "hello world!", printNumber: 5)
+
+// Optionals:
+// to avoid null crash at run time and avoid having to add additional code to check for null
+var myStr: String?
+print(myStr ?? "default value in case of nil")
+var newStr = (myStr ?? "default value") + "!"
+print(newStr)
+myStr = "Hello World"
+print(myStr ?? "default value in case of nil")
+var newStr2 = (myStr ?? "default value") + "!"
+print(newStr2)
+
+if let newStrVal = myStr {
+    var newStr3 = newStrVal + "!"
+}
